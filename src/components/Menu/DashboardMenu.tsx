@@ -62,7 +62,6 @@ export const DashboardMenu = () => {
   const [activeItem, setActiveItem] = useState("dashboard");
 
   const handleClick = (key: string) => {
-    console.log({ key });
     setActiveItem(key);
   };
 

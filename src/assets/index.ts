@@ -8,3 +8,7 @@ export * from "./SecurityIcon";
 export * from "./SettingsIcon";
 export * from "./logo";
 export * from "./LogOutIcon";
+export * from "./SubscriptionIcon";
+export * from "./TransportIcon";
+export * from "./StoreIcon";
+export * from "./LocationIcon";
