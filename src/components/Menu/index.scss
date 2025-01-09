@@ -1,0 +1,86 @@
+.dashboardMenu-container {
+  width: 290px;
+  height: 100vh;
+  // position: fixed;
+  padding-top: 47px;
+  padding-bottom: 47px;
+  padding-left: 38px;
+  padding-right: 38px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .MuiTypography-root {
+    color: #a3aed0;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+  }
+
+  .MuiList-root {
+    padding: 0;
+    .MuiMenuItem-root {
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      &:hover {
+        background-color: #e9edf7;
+      }
+      &.active {
+        background-color: #4318ff;
+        .MuiTypography-root {
+          color: #fff;
+        }
+        .MuiListItemIcon-root {
+          svg {
+            color: white;
+          }
+        }
+      }
+      .MuiListItemIcon-root {
+        min-width: auto;
+        margin-right: 14px;
+        svg {
+          color: #a3aed0;
+        }
+      }
+      .MuiListItemText-root {
+        display: flex;
+      }
+    }
+  }
+  .logout-item {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    color: #a3aed0;
+    cursor: pointer;
+    .MuiTypography-root {
+      padding-left: 14px;
+    }
+  }
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 48px;
+  .text-container {
+    margin-left: 12px;
+    .logo-title {
+      color: #4318ff;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 100%;
+    }
+    .logo-subTitle {
+      color: #4318ff;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%;
+    }
+  }
+}
