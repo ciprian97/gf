@@ -1,7 +1,18 @@
 import { BarChart, Bar, ResponsiveContainer } from "recharts";
+import { ChartData } from "../../utils/types";
 import "./index.scss";
 
-export const MicroBarChart = ({ data, height, type }) => {
+type MicroBarChartProps = {
+  data: ChartData[];
+  height: number;
+  type: string;
+};
+
+export const MicroBarChart: React.FC<MicroBarChartProps> = ({
+  data,
+  height,
+  type,
+}) => {
   return (
     <ResponsiveContainer
       width={type === "small" ? "40%" : "100%"}

@@ -2,9 +2,18 @@ import { Box, Typography } from "@mui/material";
 import { Avatar } from "../Avatar";
 import { ProfileMetrics } from "../ProfileMetrics";
 import { LocationIcon } from "../../assets";
+import { Metrics } from "../../utils/types";
 import "./index.scss";
 
-export const Profile = ({ profileData }) => {
+type ProfileProps = {
+  profileData: {
+    name: string;
+    location: string;
+    metrics: Metrics[];
+  };
+};
+
+export const Profile: React.FC<ProfileProps> = ({ profileData }) => {
   return (
     <Box className="profile-container">
       <Avatar />

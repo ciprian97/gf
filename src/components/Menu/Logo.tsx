@@ -1,4 +1,4 @@
-import { Logo } from "../../assets/logo";
+import { Logo } from "../../assets/";
 import "./index.scss";
 
 export const TopLogo = () => {

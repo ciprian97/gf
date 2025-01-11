@@ -1,10 +1,21 @@
 import { Box, Link, Typography } from "@mui/material";
 import { StoreIcon, SubscriptionIcon, TransportIcon } from "../../assets";
 import EastIcon from "@mui/icons-material/East";
-
+import { Items } from "../../utils/types";
+import { ReactNode } from "react";
 import "./index.scss";
 
-export const DetailsWidgets = ({ items, title, textLink }) => {
+type DetailsWidgets = {
+  items: Items[];
+  title: ReactNode;
+  textLink: string;
+};
+
+export const DetailsWidgets: React.FC<DetailsWidgets> = ({
+  items,
+  title,
+  textLink,
+}) => {
   const handleIcons = (iconType: string) => {
     switch (iconType) {
       case "transport":

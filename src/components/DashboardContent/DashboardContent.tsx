@@ -1,12 +1,12 @@
 import SearchIcon from "@mui/icons-material/Search";
 import { Box, InputAdornment, TextField, Typography } from "@mui/material";
-import { Content } from "../../utils/types";
-import { DetailsSection } from "../DetailsSection/DetailsSection";
+import { DataView } from "../../utils/types";
+import { DetailsSection } from "../DetailsSection";
 import { StatisticsSection } from "../StatisticsSection";
-import "./index.scss";
 import { ChipsWidgets } from "../ChipsWidgets";
+import "./index.scss";
 
-export const DashboardContent = ({ dataView }: Content) => {
+export const DashboardContent = ({ dataView }: DataView) => {
   return (
     <Box className="dashboardContent-container">
       <Box className="top-content">
@@ -35,7 +35,7 @@ export const DashboardContent = ({ dataView }: Content) => {
         />
       </Box>
       <Box gap="20px 0" display={"flex"} flexDirection={"column"}>
-        <ChipsWidgets chipsData={dataView.general.widgets} />
+        <ChipsWidgets widgets={dataView.general.widgets} />
         <StatisticsSection statiscticsData={dataView.statistics} />
         <DetailsSection detailsData={dataView.details} />
       </Box>

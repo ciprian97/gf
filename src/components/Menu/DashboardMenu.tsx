@@ -7,55 +7,9 @@ import {
   Typography,
 } from "@mui/material";
 import { TopLogo } from "./Logo";
-import {
-  ActivityIcon,
-  DashboardIcon,
-  LibraryIcon,
-  PayoutsIcon,
-  SchedulesIcon,
-  SecurityIcon,
-  SettingsIcon,
-  LogOutIcon,
-} from "../../assets";
+import { LogOutIcon } from "../../assets";
 import { useState } from "react";
-
-const menuItems = [
-  {
-    key: "dashboard",
-    label: "Dashboard",
-    icon: <DashboardIcon />,
-  },
-  {
-    key: "activity",
-    label: "Activity",
-    icon: <ActivityIcon />,
-  },
-  {
-    key: "library",
-    label: "Library",
-    icon: <LibraryIcon />,
-  },
-  {
-    key: "security",
-    label: "Security",
-    icon: <SecurityIcon />,
-  },
-  {
-    key: "schedules",
-    label: "Schedules",
-    icon: <SchedulesIcon />,
-  },
-  {
-    key: "payouts",
-    label: "Payouts",
-    icon: <PayoutsIcon />,
-  },
-  {
-    key: "settings",
-    label: "Settings",
-    icon: <SettingsIcon />,
-  },
-];
+import { menuItems } from "../../utils/mock";
 
 export const DashboardMenu = () => {
   const [activeItem, setActiveItem] = useState("dashboard");

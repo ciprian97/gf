@@ -1,5 +1,4 @@
 import { Box, Typography } from "@mui/material";
-import "./index.scss";
 import { MicroBarChart } from "../Chart";
 import {
   ActivityGraphIcon,
@@ -7,25 +6,23 @@ import {
   ClientGraphIcon,
   ProfileIcon,
 } from "../../assets";
+import { Widgets } from "../../utils/types";
+import "./index.scss";
 
-export const ChipsWidgetsContainer = ({ children }) => {
-  return <Box className="chips-widgets-container">{children}</Box>;
-};
-
-export const ChipsWidgets = ({ chipsData }) => {
+export const ChipsWidgets: React.FC<{ widgets: Widgets }> = ({ widgets }) => {
   return (
     <Box display="flex" gap={"20px"}>
       <Box className="chips-widgets-container">
-        <Box mr="25px" width="60%">
+        <Box mr="25px">
           <Typography className="chips-widget-text">
-            {chipsData.spent.text}
+            {widgets.spent.text}
           </Typography>
           <Typography className="chips-widget-value">
-            {chipsData.spent.value}
+            {widgets.spent.value}
           </Typography>
         </Box>
         <MicroBarChart
-          data={chipsData.spent.chartData.data}
+          data={widgets.spent.chartData.data}
           height={55}
           type="small"
         />
@@ -34,12 +31,12 @@ export const ChipsWidgets = ({ chipsData }) => {
         <Box className="icon-container profile">
           <ProfileIcon />
         </Box>
-        <Box mr="25px" width="60%">
+        <Box mr="25px">
           <Typography className="chips-widget-text">
-            {chipsData.newClients.text}
+            {widgets.newClients.text}
           </Typography>
           <Typography className="chips-widget-value">
-            {chipsData.newClients.value}
+            {widgets.newClients.value}
           </Typography>
         </Box>
         <ClientGraphIcon />
@@ -48,22 +45,22 @@ export const ChipsWidgets = ({ chipsData }) => {
         <Box className="icon-container chart">
           <BarChartIcon />
         </Box>
-        <Box mr="25px" width="60%">
+        <Box mr="25px">
           <Typography className="chips-widget-text">
-            {chipsData.earnings.text}
+            {widgets.earnings.text}
           </Typography>
           <Typography className="chips-widget-value">
-            {chipsData.earnings.value}
+            {widgets.earnings.value}
           </Typography>
         </Box>
       </Box>
       <Box className="chips-widgets-container gradient">
-        <Box mr="25px" width="60%">
+        <Box mr="25px">
           <Typography className="chips-widget-text activity">
-            {chipsData.activity.text}
+            {widgets.activity.text}
           </Typography>
           <Typography className="chips-widget-value activity">
-            {chipsData.activity.value}
+            {widgets.activity.value}
           </Typography>
         </Box>
         <ActivityGraphIcon />

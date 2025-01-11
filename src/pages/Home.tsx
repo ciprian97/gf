@@ -3,7 +3,7 @@ import { DashboardContent } from "../components/DashboardContent";
 import { Box } from "@mui/material";
 import { dataView } from "../utils/mock";
 
-const Home = () => {
+export const Home = () => {
   return (
     <Box display="flex" height="100vh">
       <DashboardMenu />
@@ -11,5 +11,3 @@ const Home = () => {
     </Box>
   );
 };
-
-export default Home;

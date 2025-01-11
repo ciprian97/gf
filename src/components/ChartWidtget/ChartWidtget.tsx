@@ -1,9 +1,12 @@
 import { Box, Typography } from "@mui/material";
 import { CustomBarChart } from "../Chart/BarChart";
 import { BarChartIcon } from "../../assets";
+import { ChartData } from "../../utils/types";
 import "./index.scss";
 
-export const ChartWidtget = ({ chartData }) => {
+export const ChartWidtget: React.FC<{
+  chartData: { totalSpent: string; data: ChartData[] };
+}> = ({ chartData }) => {
   return (
     <Box className="chart-widtget-container">
       <Box className="chart-widtget-title-container">

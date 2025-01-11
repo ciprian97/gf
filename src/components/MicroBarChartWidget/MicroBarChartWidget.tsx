@@ -1,11 +1,14 @@
 import { Box, Typography } from "@mui/material";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import { MicroBarChart } from "../Chart";
-import "./index.scss";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import DangerousIcon from "@mui/icons-material/Dangerous";
+import { DetailsSectionChartData } from "../../utils/types";
+import "./index.scss";
 
-export const MicroBarChartWidget = ({ chartData }) => {
+export const MicroBarChartWidget: React.FC<{
+  chartData: DetailsSectionChartData;
+}> = ({ chartData }) => {
   return (
     <Box className="micro-chart-widget-container">
       <Box className="micro-chart-widtget-title-container">

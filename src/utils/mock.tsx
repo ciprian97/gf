@@ -1,4 +1,50 @@
-import { Content } from "./types";
+import {
+  ActivityIcon,
+  DashboardIcon,
+  LibraryIcon,
+  PayoutsIcon,
+  SchedulesIcon,
+  SecurityIcon,
+  SettingsIcon,
+} from "../assets";
+
+export const menuItems = [
+  {
+    key: "dashboard",
+    label: "Dashboard",
+    icon: <DashboardIcon />,
+  },
+  {
+    key: "activity",
+    label: "Activity",
+    icon: <ActivityIcon />,
+  },
+  {
+    key: "library",
+    label: "Library",
+    icon: <LibraryIcon />,
+  },
+  {
+    key: "security",
+    label: "Security",
+    icon: <SecurityIcon />,
+  },
+  {
+    key: "schedules",
+    label: "Schedules",
+    icon: <SchedulesIcon />,
+  },
+  {
+    key: "payouts",
+    label: "Payouts",
+    icon: <PayoutsIcon />,
+  },
+  {
+    key: "settings",
+    label: "Settings",
+    icon: <SettingsIcon />,
+  },
+];
 
 export const dataView = {
   user: {
@@ -9,7 +55,6 @@ export const dataView = {
       spent: {
         text: "Spent this month",
         value: "$682.5",
-        rightIcon: "chart",
         chartData: {
           data: [
             { month: "Jan", value: 30, id: 0 },
@@ -86,25 +131,24 @@ export const dataView = {
         { month: "Jul", value: 50, id: 6 },
       ],
     },
-    transactions: {
-      transactionsItems: [
-        {
-          title: "Public Transport",
-          subTitle: "22 September 2020",
-          iconType: "transport",
-        },
-        {
-          title: "Grocery Store",
-          subTitle: "18 September 2020",
-          iconType: "store",
-        },
-        {
-          title: "Public Transport",
-          subTitle: "22 September 2020",
-          iconType: "subscriptions",
-        },
-      ],
-    },
+
+    transactionsItems: [
+      {
+        title: "Public Transport",
+        subTitle: "22 September 2020",
+        iconType: "transport",
+      },
+      {
+        title: "Grocery Store",
+        subTitle: "18 September 2020",
+        iconType: "store",
+      },
+      {
+        title: "Public Transport",
+        subTitle: "22 September 2020",
+        iconType: "subscriptions",
+      },
+    ],
     calendar: {
       date: "27 May",
       calendarItems: [
@@ -123,4 +167,4 @@ export const dataView = {
       ],
     },
   },
-} as Content;
+};

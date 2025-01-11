@@ -5,18 +5,19 @@ import {
   ResponsiveContainer,
   ReferenceLine,
 } from "recharts";
-import "./index.scss";
 import { useState } from "react";
+import { ChartData } from "../../utils/types";
+import "./index.scss";
 
 const getBarColor = (value: number, hoveredValue: number) =>
   value === hoveredValue ? "#4318FF" : "#E9EDF7";
 
-export const CustomBarChart = ({ data }) => {
+export const CustomBarChart: React.FC<{ data: ChartData[] }> = ({ data }) => {
   const [hoveredValue, setHoveredValue] = useState<{
     id: number;
     value: number;
   } | null>(null);
-  console.log({ hoveredValue });
+
   const customTickStyle = {
     fontSize: "12px",
     fontStyle: "normal",

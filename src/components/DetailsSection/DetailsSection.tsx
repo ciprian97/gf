@@ -1,14 +1,17 @@
 import { Box, Typography } from "@mui/material";
 import { DetailsWidgets } from "../DetailsWidgets/DetailsWidgets";
-import "./index.scss";
 import { MicroBarChartWidget } from "../MicroBarChartWidget";
+import { DetailsSectionType } from "../../utils/types";
+import "./index.scss";
 
-export const DetailsSection = ({ detailsData }) => {
+export const DetailsSection: React.FC<{ detailsData: DetailsSectionType }> = ({
+  detailsData,
+}) => {
   return (
     <Box display="flex" gap="20px" className="detailsSection-container">
       <MicroBarChartWidget chartData={detailsData.chartData} />
       <DetailsWidgets
-        items={detailsData.transactions?.transactionsItems}
+        items={detailsData?.transactionsItems}
         title={
           <Typography className="transactions-title">
             Your transactions
