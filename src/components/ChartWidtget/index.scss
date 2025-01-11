@@ -1,0 +1,37 @@
+.chart-widtget-container {
+  padding: 30px 35px;
+  background-color: #fff;
+  border-radius: 20px;
+  width: calc(((100% / 3) * 2));
+  .chart-widtget-title-container {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+
+    .chart-widtget-title {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: -0.28px;
+      color: #a3aed0;
+    }
+    .chart-widtget-amount {
+      color: #1b2559;
+      font-size: 34px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 42px;
+      letter-spacing: -0.68px;
+    }
+    .bar-chart-icon {
+      background-color: #f4f7fe;
+      border-radius: 7px;
+
+      svg {
+        margin-top: 2px;
+        padding: 1px 5px 0px 5px;
+      }
+    }
+  }
+}

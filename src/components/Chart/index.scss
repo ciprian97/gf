@@ -1,0 +1,10 @@
+.chart-container {
+  padding-top: 20px;
+}
+.micro-bar-chart-container {
+  svg {
+    path {
+      width: 50px !important;
+    }
+  }
+}

@@ -1,9 +1,9 @@
 import SearchIcon from "@mui/icons-material/Search";
 import { Box, InputAdornment, TextField, Typography } from "@mui/material";
 import { Content } from "../../utils/types";
-import "./index.scss";
 import { DetailsSection } from "../DetailsSection/DetailsSection";
-import { Profile } from "../Profile";
+import { StatisticsSection } from "../StatisticsSection";
+import "./index.scss";
 
 export const DashboardContent = ({ dataView }: Content) => {
   return (
@@ -33,8 +33,10 @@ export const DashboardContent = ({ dataView }: Content) => {
           variant="standard"
         />
       </Box>
-      <DetailsSection detailsData={dataView.details} />
-      <Profile profileData={dataView.profile} />
+      <Box gap="20px 0" display={"flex"} flexDirection={"column"}>
+        <StatisticsSection statiscticsData={dataView.statistics} />
+        <DetailsSection detailsData={dataView.details} />
+      </Box>
     </Box>
   );
 };

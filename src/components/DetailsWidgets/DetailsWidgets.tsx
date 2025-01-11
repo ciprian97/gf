@@ -1,4 +1,4 @@
-import { Box, Button, Link, Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
 import { StoreIcon, SubscriptionIcon, TransportIcon } from "../../assets";
 import EastIcon from "@mui/icons-material/East";
 

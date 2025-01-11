@@ -1,11 +1,11 @@
 .details-widgets-container {
   background-color: #fff;
-  padding: 20px 25px 22px 28px;
+  padding: 24px;
   border-radius: 20px;
-  min-width: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: calc(100% / 3);
   .devider {
     border-left: 4px solid #4318ff;
     height: 41px;

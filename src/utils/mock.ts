@@ -4,11 +4,57 @@ export const dataView = {
   user: {
     name: "Andrei",
   },
+  statistics: {
+    chartData: {
+      totalSpent: "$682.5",
+      data: [
+        { month: "Jan", value: 30, id: 0 },
+        { month: "Feb", value: 40, id: 1 },
+        { month: "Mar", value: 20, id: 2 },
+        { month: "Apr", value: 50, id: 3 },
+        { month: "May", value: 70, id: 4 },
+        { month: "Jun", value: 60, id: 5 },
+        { month: "Jul", value: 80, id: 6 },
+        { month: "Aug", value: 40, id: 7 },
+        { month: "Sep", value: 30, id: 8 },
+        { month: "Oct", value: 90, id: 9 },
+        { month: "Nov", value: 50, id: 10 },
+        { month: "Dec", value: 20, id: 11 },
+      ],
+    },
+    profile: {
+      name: "Charles Robbie",
+      location: "New York, USA",
+      metrics: [
+        {
+          title: "Projects",
+          number: "28",
+        },
+        {
+          title: "Followers",
+          number: "643",
+        },
+        {
+          title: "Following",
+          number: "76",
+        },
+      ],
+    },
+  },
   details: {
-    microchart: {
+    chartData: {
       amount: "$682.5",
       sentiment: "POSITIVE",
       savings: "+2.45%",
+      data: [
+        { month: "Jan", value: 30, id: 0 },
+        { month: "Feb", value: 40, id: 1 },
+        { month: "Mar", value: 20, id: 2 },
+        { month: "Apr", value: 50, id: 3 },
+        { month: "May", value: 70, id: 4 },
+        { month: "Jun", value: 60, id: 5 },
+        { month: "Jul", value: 50, id: 6 },
+      ],
     },
     transactions: {
       transactionsItems: [
@@ -46,24 +92,5 @@ export const dataView = {
         },
       ],
     },
-  },
-
-  profile: {
-    name: "Charles Robbie",
-    location: "New York, USA",
-    metrics: [
-      {
-        title: "Projects",
-        number: "28",
-      },
-      {
-        title: "Followers",
-        number: "643",
-      },
-      {
-        title: "Following",
-        number: "76",
-      },
-    ],
   },
 } as Content;

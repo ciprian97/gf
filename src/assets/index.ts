@@ -12,3 +12,4 @@ export * from "./SubscriptionIcon";
 export * from "./TransportIcon";
 export * from "./StoreIcon";
 export * from "./LocationIcon";
+export * from "./BarChartIcon";
