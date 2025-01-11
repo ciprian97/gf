@@ -36,7 +36,7 @@ export const MicroBarChartWidget = ({ chartData }) => {
         </Typography>
       </Box>
       <Box mt={"43px"}>
-        <MicroBarChart data={chartData.data} />
+        <MicroBarChart data={chartData.data} height={180} type="normal" />
       </Box>
     </Box>
   );

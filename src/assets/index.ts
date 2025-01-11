@@ -13,3 +13,6 @@ export * from "./TransportIcon";
 export * from "./StoreIcon";
 export * from "./LocationIcon";
 export * from "./BarChartIcon";
+export * from "./ActivityGraphIcon";
+export * from "./ClientGraphIcon";
+export * from "./ProfileIcon";

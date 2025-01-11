@@ -27,7 +27,7 @@ export const CustomBarChart = ({ data }) => {
   };
 
   return (
-    <ResponsiveContainer width="100%" height={300} className="chart-container">
+    <ResponsiveContainer width="100%" height={200} className="chart-container">
       <BarChart
         data={data}
         barSize={35}

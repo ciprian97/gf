@@ -5,7 +5,7 @@ import { dataView } from "../utils/mock";
 
 const Home = () => {
   return (
-    <Box display="flex">
+    <Box display="flex" height="100vh">
       <DashboardMenu />
       <DashboardContent dataView={dataView} />
     </Box>

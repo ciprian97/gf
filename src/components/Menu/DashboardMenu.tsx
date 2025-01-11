@@ -65,26 +65,30 @@ export const DashboardMenu = () => {
   };
 
   return (
-    <Box className="dashboardMenu-container">
-      <div>
-        <TopLogo />
-        <MenuList>
-          {menuItems.map((item) => (
-            <MenuItem
-              key={item.key}
-              className={`menu-item ${activeItem === item.key ? "active" : ""}`}
-              onClick={() => handleClick(item.key)}
-            >
-              <ListItemIcon>{item.icon}</ListItemIcon>
-              <ListItemText primary={item.label} />
-            </MenuItem>
-          ))}
-        </MenuList>
-      </div>
-      <div className="logout-item">
-        <LogOutIcon />
-        <Typography>Log Out</Typography>
-      </div>
+    <Box className="dashboard-menu-container">
+      <Box className="menu-container">
+        <div>
+          <TopLogo />
+          <MenuList>
+            {menuItems.map((item) => (
+              <MenuItem
+                key={item.key}
+                className={`menu-item ${
+                  activeItem === item.key ? "active" : ""
+                }`}
+                onClick={() => handleClick(item.key)}
+              >
+                <ListItemIcon>{item.icon}</ListItemIcon>
+                <ListItemText primary={item.label} />
+              </MenuItem>
+            ))}
+          </MenuList>
+        </div>
+        <div className="logout-item">
+          <LogOutIcon />
+          <Typography>Log Out</Typography>
+        </div>
+      </Box>
     </Box>
   );
 };

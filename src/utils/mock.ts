@@ -4,6 +4,36 @@ export const dataView = {
   user: {
     name: "Andrei",
   },
+  general: {
+    widgets: {
+      spent: {
+        text: "Spent this month",
+        value: "$682.5",
+        rightIcon: "chart",
+        chartData: {
+          data: [
+            { month: "Jan", value: 30, id: 0 },
+            { month: "Feb", value: 40, id: 1 },
+            { month: "Mar", value: 20, id: 2 },
+            { month: "Apr", value: 50, id: 3 },
+            { month: "May", value: 70, id: 4 },
+          ],
+        },
+      },
+      newClients: {
+        text: "New clients",
+        value: "321",
+      },
+      earnings: {
+        text: "Earnings",
+        value: "$350.40",
+      },
+      activity: {
+        text: "Activity",
+        value: "$540.50",
+      },
+    },
+  },
   statistics: {
     chartData: {
       totalSpent: "$682.5",

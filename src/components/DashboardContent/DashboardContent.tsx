@@ -4,10 +4,11 @@ import { Content } from "../../utils/types";
 import { DetailsSection } from "../DetailsSection/DetailsSection";
 import { StatisticsSection } from "../StatisticsSection";
 import "./index.scss";
+import { ChipsWidgets } from "../ChipsWidgets";
 
 export const DashboardContent = ({ dataView }: Content) => {
   return (
-    <Box mx="30px" my="47px" className="dashboardContent-container">
+    <Box className="dashboardContent-container">
       <Box className="top-content">
         <Box>
           <Typography className="name-typography">
@@ -34,6 +35,7 @@ export const DashboardContent = ({ dataView }: Content) => {
         />
       </Box>
       <Box gap="20px 0" display={"flex"} flexDirection={"column"}>
+        <ChipsWidgets chipsData={dataView.general.widgets} />
         <StatisticsSection statiscticsData={dataView.statistics} />
         <DetailsSection detailsData={dataView.details} />
       </Box>

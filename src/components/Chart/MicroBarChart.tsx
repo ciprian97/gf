@@ -1,20 +1,19 @@
 import { BarChart, Bar, ResponsiveContainer } from "recharts";
 import "./index.scss";
 
-export const MicroBarChart = ({ data }) => {
+export const MicroBarChart = ({ data, height, type }) => {
   return (
     <ResponsiveContainer
-      width="100%"
-      height={180}
+      width={type === "small" ? "40%" : "100%"}
+      height={height}
       className="micro-bar-chart-container"
     >
-      <BarChart data={data} barSize={18}>
+      <BarChart data={data} barSize={type === "small" ? 5 : 18}>
         <Bar
           dataKey="value"
           background={{
             fill: "#E9EDF7",
           }}
-          radius={[10, 10, 10, 10]}
           shape={({ x, y, width, height }) => (
             <rect
               x={x}
@@ -22,7 +21,7 @@ export const MicroBarChart = ({ data }) => {
               width={width}
               height={height}
               fill="#4318FF"
-              rx={10}
+              rx={type === "small" ? 4 : 10}
             />
           )}
         />
