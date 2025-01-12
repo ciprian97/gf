@@ -2,7 +2,8 @@
   padding: 30px 35px;
   background-color: #fff;
   border-radius: 20px;
-  width: calc(((100% / 3) * 2));
+  width: calc(((100% / 3) * 2) + 286px);
+
   @media (max-width: 900px) {
     width: 100%;
   }

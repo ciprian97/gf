@@ -18,11 +18,13 @@ export const DetailsSection: React.FC<{ detailsData: DetailsSectionType }> = ({
           </Typography>
         }
         textLink="View all"
+        type="transactions"
       />
       <DetailsWidgets
         items={detailsData.calendar.calendarItems}
         title={<Typography className="calendar-title">27 May</Typography>}
         textLink="View all Tasks"
+        type="calendar"
       />
     </Box>
   );

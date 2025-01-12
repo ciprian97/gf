@@ -14,7 +14,7 @@ export const ChipsWidgetsSection: React.FC<{ widgets: Widgets }> = ({
 }) => {
   return (
     <Box className="container">
-      <Box justifyContent="space-between" className="chips-widgets-container">
+      <Box className="chips-widgets-container" justifyContent="space-between">
         <Box>
           <Typography className="chips-widget-text">
             {widgets.spent.text}
@@ -29,7 +29,10 @@ export const ChipsWidgetsSection: React.FC<{ widgets: Widgets }> = ({
           type="small"
         />
       </Box>
-      <Box className="chips-widgets-container" justifyContent="space-between">
+      <Box
+        className="chips-widgets-container small clients"
+        justifyContent="space-between"
+      >
         <Box display="flex">
           <Box className="icon-container profile">
             <ProfileIcon />
@@ -45,7 +48,7 @@ export const ChipsWidgetsSection: React.FC<{ widgets: Widgets }> = ({
         </Box>
         <ClientGraphIcon />
       </Box>
-      <Box className="chips-widgets-container">
+      <Box className="chips-widgets-container small">
         <Box className="icon-container chart">
           <BarChartIcon />
         </Box>

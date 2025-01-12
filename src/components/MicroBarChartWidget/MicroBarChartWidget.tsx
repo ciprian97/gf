@@ -39,7 +39,7 @@ export const MicroBarChartWidget: React.FC<{
         </Typography>
       </Box>
       <Box mt={"43px"}>
-        <MicroBarChart data={chartData.data} height={180} type="normal" />
+        <MicroBarChart data={chartData.data} height={155} type="normal" />
       </Box>
     </Box>
   );

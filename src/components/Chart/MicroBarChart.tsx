@@ -19,11 +19,12 @@ export const MicroBarChart: React.FC<MicroBarChartProps> = ({
       height={height}
       className="micro-bar-chart-container"
     >
-      <BarChart data={data} barSize={type === "small" ? 5 : 18}>
+      <BarChart data={data} barSize={type === "small" ? 5 : 16}>
         <Bar
           dataKey="value"
           background={{
             fill: "#E9EDF7",
+            radius: 10,
           }}
           shape={({ x, y, width, height }) => (
             <rect
@@ -32,7 +33,7 @@ export const MicroBarChart: React.FC<MicroBarChartProps> = ({
               width={width}
               height={height}
               fill="#4318FF"
-              rx={type === "small" ? 4 : 10}
+              rx={type === "small" ? 4 : 8}
             />
           )}
         />

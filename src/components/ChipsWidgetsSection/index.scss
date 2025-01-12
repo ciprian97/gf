@@ -6,10 +6,10 @@
   }
   .chips-widgets-container {
     display: flex;
-    padding: 20px 25px;
     background-color: #fff;
     border-radius: 20px;
     width: calc(100% / 4);
+    padding: 19px 29px 20px 25px;
     align-items: center;
     @media (max-width: 1110px) {
       width: calc((100% / 2) - 60px);
@@ -19,6 +19,10 @@
     }
     &.gradient {
       background: linear-gradient(135deg, #868cff 0%, #4318ff 100%);
+    }
+
+    &.small {
+      padding-left: 17px;
     }
 
     .chips-widget-text {
@@ -50,7 +54,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-right: 30px;
+      margin-right: 18px;
       &.profile {
         background: linear-gradient(135deg, #868cff 0%, #4318ff 100%);
       }

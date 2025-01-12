@@ -1,6 +1,6 @@
 .details-widgets-container {
   background-color: #fff;
-  padding: 24px;
+  padding: 22px 25px 22px 28px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -10,6 +10,7 @@
     border-left: 4px solid #4318ff;
     height: 41px;
     margin-right: 10px;
+    border-radius: 16px;
   }
   .icon-wrapper {
     width: 48px;
@@ -33,7 +34,6 @@
   .details-widgets-subtitle {
     color: #a3aed0;
     font-size: 12px;
-    font-style: normal;
     font-weight: 500;
     line-height: 20px;
     letter-spacing: -0.24px;

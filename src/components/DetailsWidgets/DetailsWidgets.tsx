@@ -9,12 +9,14 @@ type DetailsWidgets = {
   items: Items[];
   title: ReactNode;
   textLink: string;
+  type?: string;
 };
 
 export const DetailsWidgets: React.FC<DetailsWidgets> = ({
   items,
   title,
   textLink,
+  type,
 }) => {
   const handleIcons = (iconType: string) => {
     switch (iconType) {
@@ -33,23 +35,34 @@ export const DetailsWidgets: React.FC<DetailsWidgets> = ({
     <Box className="details-widgets-container">
       <div>
         {title}
-        {items.map((item, index) => (
-          <Box display="flex" alignItems="center" mb="35px" key={index}>
-            {item.iconType ? (
-              <Box className="icon-wrapper">{handleIcons(item.iconType)}</Box>
-            ) : (
-              <div className="devider" />
-            )}
-            <Box>
-              <Typography className="details-widgets-title">
-                {item.title}
-              </Typography>
-              <Typography className="details-widgets-subtitle">
-                {item.subTitle}
-              </Typography>
+        <Box
+          display="flex"
+          flexDirection="column"
+          gap={type === "calendar" ? "21px 0" : "31px 0"}
+        >
+          {items.map((item, index) => (
+            <Box
+              display="flex"
+              alignItems="center"
+              // mb={type === "calendar" ? "21px" : "31px"}
+              key={index}
+            >
+              {item.iconType ? (
+                <Box className="icon-wrapper">{handleIcons(item.iconType)}</Box>
+              ) : (
+                <div className="devider" />
+              )}
+              <Box>
+                <Typography className="details-widgets-title">
+                  {item.title}
+                </Typography>
+                <Typography className="details-widgets-subtitle">
+                  {item.subTitle}
+                </Typography>
+              </Box>
             </Box>
-          </Box>
-        ))}
+          ))}
+        </Box>
       </div>
       <Link className="link-container">
         <Typography className="text-link">{textLink}</Typography>
