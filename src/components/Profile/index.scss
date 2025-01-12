@@ -6,7 +6,9 @@
   flex-direction: column;
   align-items: center;
   width: calc(100% / 3);
-  width: 350px;
+  @media (max-width: 900px) {
+    width: 100%;
+  }
   .profile-name {
     color: #1b2559;
     font-size: 24px;

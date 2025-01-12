@@ -3,6 +3,9 @@
   background-color: #fff;
   border-radius: 20px;
   width: calc(((100% / 3) * 2));
+  @media (max-width: 900px) {
+    width: 100%;
+  }
   .chart-widtget-title-container {
     display: flex;
     align-items: start;

@@ -1,14 +1,14 @@
-import SearchIcon from "@mui/icons-material/Search";
-import { Box, InputAdornment, TextField, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { DataView } from "../../utils/types";
 import { DetailsSection } from "../DetailsSection";
 import { StatisticsSection } from "../StatisticsSection";
-import { ChipsWidgets } from "../ChipsWidgets";
+import { ChipsWidgetsSection } from "../ChipsWidgetsSection";
 import "./index.scss";
+import { Search } from "../Search";
 
 export const DashboardContent = ({ dataView }: DataView) => {
   return (
-    <Box className="dashboardContent-container">
+    <Box className="dashboard-content-container">
       <Box className="top-content">
         <Box>
           <Typography className="name-typography">
@@ -18,24 +18,10 @@ export const DashboardContent = ({ dataView }: DataView) => {
             Welcome to Venus!
           </Typography>
         </Box>
-        <TextField
-          placeholder="Search"
-          className="search"
-          id="search"
-          slotProps={{
-            input: {
-              startAdornment: (
-                <InputAdornment position="start">
-                  <SearchIcon />
-                </InputAdornment>
-              ),
-            },
-          }}
-          variant="standard"
-        />
+        <Search />
       </Box>
-      <Box gap="20px 0" display={"flex"} flexDirection={"column"}>
-        <ChipsWidgets widgets={dataView.general.widgets} />
+      <Box gap="20px 0" display={"flex"} flexDirection={"column"} pb="47px">
+        <ChipsWidgetsSection widgets={dataView.general.widgets} />
         <StatisticsSection statiscticsData={dataView.statistics} />
         <DetailsSection detailsData={dataView.details} />
       </Box>

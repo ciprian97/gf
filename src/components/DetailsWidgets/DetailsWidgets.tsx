@@ -33,8 +33,8 @@ export const DetailsWidgets: React.FC<DetailsWidgets> = ({
     <Box className="details-widgets-container">
       <div>
         {title}
-        {items.map((item) => (
-          <Box display="flex" alignItems="center" mb="35px">
+        {items.map((item, index) => (
+          <Box display="flex" alignItems="center" mb="35px" key={index}>
             {item.iconType ? (
               <Box className="icon-wrapper">{handleIcons(item.iconType)}</Box>
             ) : (

@@ -8,7 +8,7 @@ export const DetailsSection: React.FC<{ detailsData: DetailsSectionType }> = ({
   detailsData,
 }) => {
   return (
-    <Box display="flex" gap="20px" className="detailsSection-container">
+    <Box className="detailsSection-container">
       <MicroBarChartWidget chartData={detailsData.chartData} />
       <DetailsWidgets
         items={detailsData?.transactionsItems}

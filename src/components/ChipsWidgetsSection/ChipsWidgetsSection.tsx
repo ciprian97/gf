@@ -9,11 +9,13 @@ import {
 import { Widgets } from "../../utils/types";
 import "./index.scss";
 
-export const ChipsWidgets: React.FC<{ widgets: Widgets }> = ({ widgets }) => {
+export const ChipsWidgetsSection: React.FC<{ widgets: Widgets }> = ({
+  widgets,
+}) => {
   return (
-    <Box display="flex" gap={"20px"}>
-      <Box className="chips-widgets-container">
-        <Box mr="25px">
+    <Box className="container">
+      <Box justifyContent="space-between" className="chips-widgets-container">
+        <Box>
           <Typography className="chips-widget-text">
             {widgets.spent.text}
           </Typography>
@@ -27,17 +29,19 @@ export const ChipsWidgets: React.FC<{ widgets: Widgets }> = ({ widgets }) => {
           type="small"
         />
       </Box>
-      <Box className="chips-widgets-container">
-        <Box className="icon-container profile">
-          <ProfileIcon />
-        </Box>
-        <Box mr="25px">
-          <Typography className="chips-widget-text">
-            {widgets.newClients.text}
-          </Typography>
-          <Typography className="chips-widget-value">
-            {widgets.newClients.value}
-          </Typography>
+      <Box className="chips-widgets-container" justifyContent="space-between">
+        <Box display="flex">
+          <Box className="icon-container profile">
+            <ProfileIcon />
+          </Box>
+          <Box>
+            <Typography className="chips-widget-text">
+              {widgets.newClients.text}
+            </Typography>
+            <Typography className="chips-widget-value">
+              {widgets.newClients.value}
+            </Typography>
+          </Box>
         </Box>
         <ClientGraphIcon />
       </Box>
@@ -54,7 +58,10 @@ export const ChipsWidgets: React.FC<{ widgets: Widgets }> = ({ widgets }) => {
           </Typography>
         </Box>
       </Box>
-      <Box className="chips-widgets-container gradient">
+      <Box
+        className="chips-widgets-container gradient"
+        justifyContent="space-between"
+      >
         <Box mr="25px">
           <Typography className="chips-widget-text activity">
             {widgets.activity.text}

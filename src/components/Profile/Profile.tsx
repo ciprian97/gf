@@ -27,8 +27,8 @@ export const Profile: React.FC<ProfileProps> = ({ profileData }) => {
         </Box>
       </Box>
       <Box display="flex" mt="31px" gap="42px">
-        {profileData.metrics.map((item) => (
-          <ProfileMetrics title={item.title} number={item.number} />
+        {profileData.metrics.map((item, index) => (
+          <ProfileMetrics title={item.title} number={item.number} key={index} />
         ))}
       </Box>
     </Box>
