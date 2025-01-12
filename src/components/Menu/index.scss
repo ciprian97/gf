@@ -13,18 +13,25 @@
     justify-content: space-between;
     height: calc(100vh - (47px * 2));
 
+    .menu-devider {
+      width: calc(100% + 76px);
+      height: 1px;
+      background-color: #f4f7fe;
+      margin: 24px 0px 24px -38px;
+    }
+
     .MuiTypography-root {
       color: #a3aed0;
       font-size: 16px;
       font-style: normal;
       font-weight: 500;
-      line-height: 26px;
+      line-height: 28px;
     }
 
     .MuiList-root {
       padding: 0;
       .MuiMenuItem-root {
-        padding: 10px;
+        padding: 9px;
         margin-bottom: 15px;
         border-radius: 5px;
         &:hover {
@@ -67,7 +74,7 @@
   .logo-container {
     display: flex;
     align-items: center;
-    margin-bottom: 48px;
+
     .text-container {
       margin-left: 12px;
       .logo-title {

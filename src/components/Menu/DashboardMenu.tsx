@@ -23,6 +23,7 @@ export const DashboardMenu = () => {
       <Box className="menu-container">
         <div>
           <TopLogo />
+          <div className="menu-devider" />
           <MenuList>
             {menuItems.map((item) => (
               <MenuItem
