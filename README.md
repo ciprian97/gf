@@ -1,4 +1,4 @@
-# Test Technic
+# GF
 
 A React application bootstrapped with Vite, featuring various front-end tools like Material UI, Recharts, and Sass for styling. This project is built with TypeScript and follows modern development practices, including linting and fast development builds.
 
