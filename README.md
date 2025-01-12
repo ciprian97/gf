@@ -16,12 +16,3 @@ Before you can run the project locally, ensure you have the following installed:
 
 - Node.js (>= 16.x)
 - npm or yarn
-
-## Getting Started
-
-Clone the repository:
-
-```bash
-git clone <repository_url>
-cd test-tehnic
-```
